@@ -16,7 +16,7 @@ const AddTask = () => {
         };
         const data = Object.assign(supplierData, d);
 
-        const url = `http://localhost:5000/task`;
+        const url = `https://damp-scrubland-55595.herokuapp.com/task`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -26,7 +26,6 @@ const AddTask = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
                 if (result.acknowledged === true) {
                     toast('Your task is added..');
                     reset();

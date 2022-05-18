@@ -4,7 +4,7 @@ const DelTask = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/task')
+        fetch('https://damp-scrubland-55595.herokuapp.com/task')
             .then(res => res.json())
             .then(data => setTasks(data));
     }, [])
@@ -12,7 +12,7 @@ const DelTask = () => {
     const deleteTask = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/task/${id}`;
+            const url = `https://damp-scrubland-55595.herokuapp.com/task/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -40,7 +40,6 @@ const DelTask = () => {
                         </div>
                     </div>)
                 }
-
             </div>
         </div>
     );
