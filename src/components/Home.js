@@ -10,7 +10,7 @@ const Login = () => {
 
             <p className='text-center text-2xl text-secondary'>Here, you can add and delete your task. To add your task or delete your task please Login or Sign Up</p>
             <div className='text-center py-8'>
-                <Link className='text-2xl text-red-700 font-bold text-center' to='/addtask'><button class="btn btn-outline btn-primary">Add task</button>
+                <Link className='text-2xl text-red-700 font-bold text-center' to='/addtask'><button className="btn btn-outline btn-primary">Add task</button>
                 </Link>
             </div>
         </section>
